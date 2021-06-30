@@ -1,0 +1,262 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function escapeHTML(text) {
+  var div = document.createElement('div');
+  var text = document.createTextNode(text);
+  div.appendChild(text);
+  return div.innerHTML;
+}
+
+function getrval(r) {
+    for (var i=0; i < r.length; i++) {
+        if (r[i].checked) return r[i].value;
+    } 
+}
+
+function update() {
+    f = document.forms.widget;
+    which = getrval(f.which);
+    if (which == "all") {
+        url = "http://${sr_domain}/" + f.what.value + "/.embed?limit=" +
+                      f.num.value + "&t=" + f.when.value;
+        if(f.what.value == "new") {
+           url += "&sort=new";
+        }
+    } else if (which == "one") {
+        if (!f.who.value) return;
+        url = "http://${domain}/user/"+f.who.value+"/"+
+                      f.where2.value+".embed?limit=" + f.num.value + 
+                      "&sort="+f.what.value;
+
+    } else if (which == "two") {
+        if(!f.domain.value) return;
+         url = "http://${domain}/domain/" + f.domain.value + "/" + 
+                      f.what.value + "/.embed?limit=" 
+                      + f.num.value  + "&t=" + f.when.value;
+        if(f.what.value == "new") {
+           url += "&sort=new";
+        }
+    } else {
+        alert(which);
+    }
+    $("#preview").css("width", "");
+    if(f.expanded.checked) {
+      url += "&expanded=1";
+    }
+    if(f.nostyle.checked) {
+      url += "&style=off";
+      $("#css-options").hide();
+    }
+    else {
+      $("#css-options").show();
+      if(f.border.checked && f.bord_color.value) {
+        url += "&bordercolor=" + f.bord_color.value;
+      }
+      if(f.background.checked && f.bg_color.value) {
+        url += "&bgcolor=" + f.bg_color.value;
+      }
+      if(f.twocol.checked) {
+        url += "&twocolumn=true";
+        $("#preview").css("width", "550px");
+      }
+    }
+
+    script = '        src="' + 
+                      escapeHTML(url).replace(/&amp;/g, '&') + 
+                      '" type="text/javascript"><'+'/       ';
+    $("#codebox").html(escapeHTML(script));
+    $.getScript(url+'&callback=' + encodeURIComponent('$("#previewbox").html'));
+                      
+    }
+
+
+
+
+
+
+
+function script____707030580() {src("http://${sr_domain}/.embed?limit=5");}
+
+
+
+
+
+
+
+
+
+        function onsubmit____1045537950() {update(); return false}
+
+
+   function onchange____758570624() {update()}                       function onfocus____758570624() {update()}
+
+
+
+
+
+
+
+
+     function onchange____758570624() {update()}
+function onfocus___1409780597() {this.parentNode.firstChild.checked='checked'}
+
+
+
+
+
+
+
+
+function onfocus___1409780597() {this.parentNode.firstChild.checked='checked'}
+function onchange____758570624() {update()}          function onblur____758570624() {update()}
+
+
+
+
+
+
+
+
+
+function onclick____758570624() {update()}
+
+
+
+                                function onclick____758570624() {update()}
+
+
+
+                                 function onclick____758570624() {update()}
+
+
+
+
+
+
+
+
+
+
+
+        function onchange____758570624() {update()}
+
+
+
+
+
+
+
+
+
+
+
+
+       function onchange____758570624() {update()}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function onchange____758570624() {update()}
+
+
+
+
+
+
+
+
+
+function onchange____758570624() {update()}
+
+
+
+
+
+
+
+
+
+
+function onchange____758570624() {update()}
+
+
+
+
+
+
+function onchange____758570624() {update()}
+
+
+
+
+
+
+
+
+
+
+function onchange____758570624() {update()}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

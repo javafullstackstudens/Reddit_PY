@@ -1,0 +1,57 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $('[name="seconds_visibility"]').click(
+    function () {
+      var form = $('#seconds_visibility_form');
+      post_form(form, 'server_seconds_visibility');
+    }
+  ) 
+
+
+
+ 

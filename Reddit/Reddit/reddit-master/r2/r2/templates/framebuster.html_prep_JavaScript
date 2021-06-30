@@ -1,0 +1,86 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      %if thing.login:
+        $.cookie_write({name: "redditSession", data: "cname",
+                        domain: "${c.site.domain}" });
+        if(parent.$ && parent.$.framebuster) 
+           parent.$.framebuster();
+      %else:
+        $.cookie_write({name: "redditSession", data: "",
+                        domain: "${c.site.domain}"});
+      %endif
+    
+
+
+
+
+
+
+
+
+
+
+
+      (function($) {
+         $.framebuster = function() {
+            $(function() {
+                if($.browser.mozilla) {
+                   var url = window.location.href;
+                   $.redirect(url + ((url.indexOf('?') == -1)?'?':'&') +
+                         'v=' + Math.random());
+                }
+                else
+                   $.refresh();
+             });
+         }
+      })(jQuery);
+      document.write('<iframe name="reddit-window" id="reddit-window"' +
+       'src="http://${get_domain(cname=False, subreddit=True)}/framebuster/'
+       + Math.random() + 
+       '" width="1" height="1" style="visibility: hidden"></iframe>');
+    
+
+
+
+
+ 

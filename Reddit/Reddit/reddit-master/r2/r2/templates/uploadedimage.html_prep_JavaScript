@@ -1,0 +1,42 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Cx_0dummy
+
+
+      parent.completedUploadImage('${thing.status}','${thing.img_src or ""}',
+                                  '${thing.name or ""}', ${unsafe(errors)},'${thing.form_id}');    
+    
+
+
+
+
+
+
+
+ 

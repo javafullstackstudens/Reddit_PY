@@ -1,0 +1,47 @@
+﻿-- the contents of this file are subject to the common public attribution
+-- license version 1.0. (the "license"); you may not use this file except in
+-- compliance with the license. you may obtain a copy of the license at
+-- http://code.reddit.com/license. the license is based on the mozilla public
+-- license version 1.1, but sections 14 and 15 have been added to cover use of
+-- software over a computer network and provide for limited attribution for the
+-- original developer. in addition, exhibit a has been modified to be
+-- consistent with exhibit b.
+--
+-- software distributed under the license is distributed on an "as is" basis,
+-- without warranty of any kind, either express or implied. see the license for
+-- the specific language governing rights and limitations under the license.
+--
+-- the original code is reddit.
+--
+-- the original developer is the initial developer.  the initial developer of
+-- the original code is reddit inc.
+--
+-- all portions of the code written by reddit are copyright (c) 2006-2014
+-- reddit inc. all rights reserved.
+-------------------------------------------------------------------------------
+
+create or replace function hot(ups integer, downs integer, date timestamp with time zone) returns numeric as $$
+    select round(cast(log(greatest(abs($1 - $2), 1)) * sign($1 - $2) + (date_part('epoch', $3) - 1134028003) / 45000.0 as numeric), 7)
+$$ language sql immutable;
+
+create or replace function score(ups integer, downs integer) returns integer as $$
+    select $1 - $2
+$$ language sql immutable;
+
+create or replace function controversy(ups integer, downs integer) returns float as $$
+    select cast(($1 + $2) as float)/(abs($1 - $2)+1)
+$$ language sql immutable;
+
+create or replace function ip_network(ip text) returns text as $$
+    select substring($1 from e'[\\d]+\.[\\d]+\.[\\d]+')
+$$ language sql immutable;
+
+create or replace function base_url(url text) returns text as $$
+    select substring($1 from e'(?i)(?:.+?://)?(?:www[\\d]*\\.)?([^#]*[^#/])/?')
+$$ language sql immutable;
+
+create or replace function domain(url text) returns text as $$
+    select substring($1 from e'(?i)(?:.+?://)?(?:www[\\d]*\\.)?([^#/]*)/?')
+$$ language sql immutable;
+
+ 

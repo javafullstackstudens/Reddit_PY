@@ -1,0 +1,203 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(function() {
+ $(".view-code").click(function(evt) { 
+    $(this).parent().addClass("show-demo"); 
+ });
+ $(".hide-code").click(function(evt) { 
+    $(this).parent().removeClass("show-demo"); 
+ });
+});
+
+
+
+
+function onclick___339630222() {window.location = 'http://${domain}/submit?url=' + encodeURIComponent(window.location); return false}
+
+
+
+
+
+
+
+function href___1891498161() {void(0)}
+function href___1891498161() {void(0)}
+
+
+
+
+
+
+
+
+
+function script___690469916() {src("http://${domain}/buttonlite.js?i=${image}");}
+
+
+
+
+function script___1408927166() {src("http://${domain}/buttonlite.js?i=1&styled=off&url=foo.com&newwindow=1");}
+
+
+
+
+
+function script____1490788256() {src("http://${domain}/static/button/button${type}.js");}
+
+
+function script____752879391() {src("http://${domain}/static/button/button1.js");}
+
+
+
+
+                                  reddit_${option}='${val}'
+
+
+
+  reddit_url = "http://${domain}/buttons";
+  reddit_title = "Buttons!";
+  reddit_bgcolor = "FF3";
+  reddit_bordercolor = "00F";
+
+function script____752807645() {src("http://${domain}/static/button/button3.js");}
+
+
+
+
+ 

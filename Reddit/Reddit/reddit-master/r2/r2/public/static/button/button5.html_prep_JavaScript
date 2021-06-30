@@ -1,0 +1,120 @@
+﻿
+
+
+
+
+
+
+                                    var reddit = { };
+function script___658609381() {src("//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js");}
+function script____345512738() {src("../button.js");}
+
+      function finalize_thing(data) {
+         var ups = data.ups - (data.likes?1:0);
+         var downs = data.downs - (data.likes==false?1:0);
+         var other = 1.0 * (ups + downs);
+         ups = [ups, ups, ups + 1];
+         downs = [downs+1, downs, downs];
+         other = [other + 1, other, other + 1];
+
+         var up_pct = [], down_pct = [];
+         for(var i = 0; i < 3; i++) {
+            $("#up" + i + " .num").html(ups[i]);
+            $("#down" + i + " .num").html(downs[i]);
+            var up_pct = null;
+            if(other[i]) {
+               up_pct = Math.round( 100 * ups[i] / other[i]);
+               $("#up" + i + " .percent").html(up_pct + "%");
+               $("#down" + i + " .percent").html(
+                         Math.round( 100 * downs[i] / other[i]) + "%");
+            } else {
+               $("#up" + i + " .percent").html("--%");
+               $("#down" + i + " .percent").html("--%");
+            }
+            if(up_pct != null) {
+                up_pct = Math.abs(50 - up_pct);
+                if (up_pct <= 5) {
+                    $("#controversy"+i).html("quite controversial");
+                } else if (up_pct <= 15) {
+                    $("#controversy"+i).html("controversial");
+                } else if (up_pct <= 25) {
+                    $("#controversy"+i).html("uncontroversial");
+                } else {
+                    $("#controversy"+i).html("quite uncontroversial");
+                }
+            }
+         }
+      }
+      function set_score(id, dir) { 
+        id = $(id).filter(":first").thing_id(); 
+        for(var i = 0; i< 3; i++) { 
+            var fn = (i == dir + 1) ? 'show': 'hide'; 
+            $("#down" + i)[fn](); 
+            $("#up" + i)[fn](); 
+            $("#controversy" + i)[fn]();
+         }
+      }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

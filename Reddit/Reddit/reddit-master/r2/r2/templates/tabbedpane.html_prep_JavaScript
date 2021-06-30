@@ -1,0 +1,46 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $(function() {
+        var target = "tab-" + $(window.location).attr("hash").substr(1);
+        $(".tabmenu li").each(function() {
+            if (this.id == target) {
+                $(this).find("a").click();
+            }
+        });
+    });
+  
+
+
+
+ 

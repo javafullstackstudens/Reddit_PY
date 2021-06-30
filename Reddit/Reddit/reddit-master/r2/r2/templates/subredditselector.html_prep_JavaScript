@@ -1,0 +1,51 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function onmouseover____888525376() {highlight_reddit(this)}
+function onmousedown___1786938976() {return sr_dropdown_mdown(this)}
+function onmouseup___936741969() {sr_dropdown_mup(this)}
+
+
+
+  reddit.sr_cache = ${unsafe(thing.sr_searches)};
+
+
+
+
+
+
+
+
+
+
+
+           function onclick____1205821873() {set_sr_name(this); return false}
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,47 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       if (window == window.top) {
+         window.location = "${add_sr('/tb/' + thing.link._id36)}"
+       }
+    
+
+
+
+                                                   function onload____2113483696() {window.frames[1].focus()}
+function iframe___1203114800() {src("${add_sr('/toolbar/comments/'+thing.link._id36)}");}
+
+function iframe___365413880() {src("${thing.url}");sandbox("allow-scripts allow-forms allow-same-origin");}
+
+
+
+
+
+ 

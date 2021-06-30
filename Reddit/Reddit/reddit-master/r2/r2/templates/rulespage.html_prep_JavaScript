@@ -1,0 +1,116 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ function onClick___1771993122() {return toggle_expando(this);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggle_expando(elem){
+  var examples = $(elem).siblings(".rule-examples");
+  var toggle = $(elem).find(".toggle");
+  if (examples.is(":visible")){
+    toggle.text("[+]");
+    examples.slideUp();
+  } else {
+    toggle.text("[\u2013]");
+    examples.slideDown();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
